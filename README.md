@@ -15,6 +15,30 @@ It is advised to install all the requirements inside [virtualenv], use [virtuale
 [virtualenv]: https://virtualenv.pypa.io/en/latest/
 [virtualenvwrapper]: https://virtualenvwrapper.readthedocs.org/en/latest/
 
+To install virtualenv:
+
+Note: If you get any permission denied errors, please add sudo before `pip` (i.e. `sudo pip install virtualenv`)
+
+```
+pip install virtualenv
+```
+
+To create a virtual environment named `test`:
+
+```
+virtualenv test
+```
+This will create a new directory named `test` at your current working directory (where you are in your terminal).
+
+To activate this virtualenv you have to call `activate` located inside `test/bin/`. So navigate to test/bin and call `activate` in this manner:
+
+```
+source activate
+```
+(To deactivate then this virtualenv just call `deactivate`)
+
+So now have your virtualenv activated and continue as below:
+
 ```
 pip install -r requirements-dev.txt
 cp settings/dev.py.sample settings/dev.py
